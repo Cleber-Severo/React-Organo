@@ -13,11 +13,15 @@ const times = [
   'Inovação e Gestão'
 ]
 
+const confirmaFormulario = (evento) => {
+    evento.preventDefault()
+}
+
 const Formulario = () => {
     return(
 
         <section className="formulario">
-            <form>
+            <form onSubmit={confirmaFormulario}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
                 <CampoTexto label="Nome" placeholder="Digite seu nome"/>
                 <CampoTexto label="cargo" placeholder="Digite seu cargo"/>
