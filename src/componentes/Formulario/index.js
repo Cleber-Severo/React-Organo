@@ -5,7 +5,7 @@ import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css'
 
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const times = [
         'Programação',
@@ -24,8 +24,13 @@ const Formulario = () => {
 
     const confirmaFormulario = (evento) => {
         evento.preventDefault()
-        console.log('Form foi submetido => ', nome, cargo, time, imagem )
-    }
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
+    }    
 
     return(
 
