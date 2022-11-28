@@ -10,7 +10,7 @@ const Formulario = (props) => {
     const [nome, setNome] = useState ('')
     const [cargo, setCargo] = useState ('')
     const [imagem, setImagem] = useState ('')
-    const [time, setTimes] = useState ('')
+    const [time, setTime] = useState ('')
 
     const confirmaFormulario = (evento) => {
         evento.preventDefault()
@@ -24,7 +24,7 @@ const Formulario = (props) => {
         setNome('')
         setCargo('')
         setImagem('')
-        setTimes('')
+        setTime('')
     }    
 
     return(
@@ -49,7 +49,7 @@ const Formulario = (props) => {
                 <CampoTexto 
                     label="imagem" 
                     placeholder="Informe o endereço da imagem"
-                    value={imagem}
+                    valor={imagem}
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
@@ -57,7 +57,7 @@ const Formulario = (props) => {
                     label="Time" 
                     itens={props.times}
                     valor={time}
-                    aoAlterado={valor => setTimes(valor)}
+                    aoAlterado={valor => setTime(valor)}
                 />
                 <Botao>
                     Criar card
